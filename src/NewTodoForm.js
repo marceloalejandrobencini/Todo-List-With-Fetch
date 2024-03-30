@@ -6,7 +6,7 @@ export const NewTodoForm = ({ agregartodo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     agregartodo(inputValue);
-    setInputValue(''); // Limpia el campo de entrada después de agregar la tarea
+    setInputValue(''); 
   };
 
   return (
