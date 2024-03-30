@@ -20,8 +20,7 @@ const App = () => {
     .then(response => response.json())
     .then(data => {
       if (Array.isArray(data) && data.length === 0) {
-        // Si el array está vacío, significa que el usuario está inicializado pero sin tareas.
-        // No necesitamos agregar "Pasear a Zeus" automáticamente en este punto.
+       
         console.log('No hay tareas.');
       } else if (Array.isArray(data)) {
         const tareasTransformadas = data.map(({ label, done, id }) => ({
@@ -50,7 +49,7 @@ const App = () => {
       return response.json();
     })
     .then(() => {
-      cargarTareas(); // Podrías considerar quitar esta llamada aquí y llamarla solo si es necesario.
+      cargarTareas(); 
     })
     .catch(error => console.error('Problemas con todo', error));
   };
@@ -77,7 +76,7 @@ const App = () => {
 
   const deleteAllTodo = () => {
     synctodos([]).then(() => {
-      setTodos([]); // Actualiza el estado para reflejar que todas las tareas han sido borradas.
+      setTodos([]); 
     }).catch(error => {
       console.error('Error al borrar todas las tareas:', error);
     });
