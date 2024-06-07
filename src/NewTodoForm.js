@@ -7,7 +7,7 @@ export const NewTodoForm = ({ agregartodo }) => {
     e.preventDefault();
     agregartodo(inputValue);
     setInputValue(''); 
-  }; 
+  };
 
   return (
     <form onSubmit={handleSubmit}>
