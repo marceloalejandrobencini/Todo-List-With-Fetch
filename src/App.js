@@ -20,7 +20,6 @@ const App = () => {
     .then(response => response.json())
     .then(data => {
       if (Array.isArray(data) && data.length === 0) {
-       
         console.log('No hay tareas.');
       } else if (Array.isArray(data)) {
         const tareasTransformadas = data.map(({ label, done, id }) => ({
@@ -49,7 +48,7 @@ const App = () => {
       return response.json();
     })
     .then(() => {
-      cargarTareas(); 
+      cargarTareas();
     })
     .catch(error => console.error('Problemas con todo', error));
   };
@@ -95,3 +94,4 @@ const App = () => {
 };
 
 export default App;
+
