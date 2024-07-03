@@ -11,7 +11,7 @@ const App = () => {
   }, []);
 
   const cargarTareas = () => {
-    fetch('https://playground.4geeks.com/apis/fake/todos/user/marcelobencini', {
+    fetch('https://playground.4geeks.com/todo/docs', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const App = () => {
   };
 
   const synctodos = (todosParaSincronizar) => {
-    return fetch('https://playground.4geeks.com/apis/fake/todos/user/marcelobencini', {
+    return fetch('https://playground.4geeks.com/todo/docs', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
